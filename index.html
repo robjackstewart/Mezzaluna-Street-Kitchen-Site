@@ -7,15 +7,13 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- bootstrap -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-        crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
 
-    
+
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 
@@ -23,6 +21,10 @@
         @font-face {
             font-family: grado;
             src: url(GradoGradooNF.otf);
+        }
+
+        * {
+            color: #CEBB6F !important;
         }
 
         .windsong {
@@ -34,10 +36,19 @@
         body {
             height: 100%;
             width: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: #484B5A;
         }
 
-        html {
-            background-color: white;
+        .bg-blue {
+            background-color: #484B5A;
+            color:#CEBB6F;
+        }
+
+        .bg-gold {
+            background-color: #CEBB6F;
+            color:#484B5A !important;
         }
 
         body {
@@ -53,30 +64,6 @@
         .section {
             min-height: 100vh;
             padding: 0 !important;
-        }
-
-        .bg-black {
-            background-color: black;
-            color: white;
-        }
-
-        .bg-white {
-            background-color: white;
-            /* background-image: url(https://stmed.net/sites/default/files/marble-wallpapers-28718-9121924.jpg); */
-            color: black;
-        }
-
-        .bg-red {
-            background-color: red;
-            color: white;
-        }
-
-        .bg-gray {
-            background-color: gray;
-        }
-
-        .t-white {
-            color: white;
         }
 
         .header {
@@ -102,43 +89,8 @@
             padding: 0;
         }
 
-        .navbar {
-            padding: 0;
-        }
-
-        .black-leather {
-            background-color: #000000;
-            background-image: url(http://www.transparenttextures.com/patterns/dark-leather.png);
-            color: white !important;
-            /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-        }
-
-        .black-leather a {
-            color: #871425 !important;
-        }
-
-        /* .bg-white a {
-            color: black !important;
-        } */
-
-        .t-red {
-            color: #871425;
-        }
-
-        .t-charcoal {
-            color: #36454f;
-        }
-
-        .t-black {
-            color: black;
-        }
-
         .t-bold {
             font-weight: bold;
-        }
-
-        .bg-white a {
-            color: black;
         }
 
         li {
@@ -158,12 +110,6 @@
             padding: 1rem;
         }
 
-        .bottom-right {
-            position: absolute;
-            bottom: 2%;
-            right: 2%;
-        }
-
         .section-title {
             min-height: 250px;
         }
@@ -172,18 +118,21 @@
             cursor: pointer;
         }
 
-        .stitched {
-            border-radius: 5px;
-            border: 2px dashed #fff;
-            outline: 2px dashed darken(white, 10);
-            margin: 2%;
-
+        @media (max-width:992px) {
+            .parallax-img {
+                object-fit: scale-down;
+            }
         }
 
-        img {
+        @media (min-width:993px) {
+            .parallax-img {
+                object-fit: cover;
+            }
+        }
+
+        .parallax-img {
             height: 100vh;
             width: 100%;
-            object-fit: cover;
         }
 
         .w-100 {
@@ -201,41 +150,72 @@
         .parallax-container {
             height: 50vh;
         }
+
+        .logo-img {
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
     </style>
 
 </head>
 
 <body class="bg-white fade-out">
     <div class="section w-100">
-        <div class="valign-wrapper" style="height:90vh;">
-            <h1 class="windsong w-100 center-align">Mezzaluna
-                <br />Street Kitchen</h1>
+        <div class="valign-wrapper center" style="height:90vh;">
+            <img src="./logo.jpg" height="auto" width="500px" class="logo-img" />
         </div>
 
-        <div class="" style="height:10vh; position:relative;">
+        <div class="container" style="height:10vh; position:relative;">
             <div class="w-100" style="bottom:0; position: absolute;">
-                <div class="center-align w-100">
+                <div class="row center-align">
+                    <div class="col s4 text-center">
+                        <a href="#about" class="small waves-effect waves-light">
+                            <span>
+                                <i class="material-icons">account_box</i>
+                            </span>
+                            <div class="hide-on-small-only">ABOUT US</div>
+                        </a>
+                    </div>
+                    <div class="col s4">
+                            <a href="#work" class="small waves-effect waves-light">
+                                    <span>
+                                        <i class="material-icons">restaurant_menu</i>
+                                    </span>
+                                    <div class="hide-on-small-only">OUR FOOD</div>
+                                </a>
+                    </div>
+                    <div class="col s4">
+                            <a href="#contact" class="small waves-effect waves-light">
+                                    <span>
+                                        <i class="material-icons">email</i>
+                                    </span>
+                                    <div class="hide-on-small-only">CONTACT US</div>
+                                </a>
+                    </div>
+                </div>
+                <!-- <div class="center-align w-100">
                     <ul class="t-bold p-0">
                         <li>
-                            <a href="#about">ABOUT</a>
+                            <a href="#about" class="small"><span><i class="material-icons">account_box</i></span><div class="hide-on-small-only">ABOUT US</div></a>
                         </li>
                         <li class="list-divider t-charcoal">/</li>
                         <li>
-                            <a href="#work">OUR FOOD</a>
+                            <a href="#work" class="small"><span><i class="material-icons">restaurant_menu</i></span><div class="hide-on-small-only">OUR FOOD</div></a>
                         </li>
                         <li class="list-divider t-charcoal">/</li>
                         <li>
-                            <a href="#contact">CONTACT</a>
+                            <a href="#contact" class="small"><span><i class="material-icons">email</i></span><div class="hide-on-small-only">CONTACT US</div></a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
     <div id="about" class="section">
         <div class="parallax-container center valign-wrapper">
             <div class="parallax">
-                <img src="http://seagrassbhg.com/wp-content/gallery/italian-street/isk5.jpg">
+                <img src="https://pastaandcream.com/wp-content/uploads/2014/05/adobestock_91023329-2048x1371.jpeg" class="parallax-img" />
             </div>
 
             <div class="container">
@@ -246,44 +226,45 @@
                 </div>
             </div>
         </div>
-        <div class="w-100 bg-white h-half valign-wrapper">
+        <div class="container bg-white h-half valign-wrapper">
             <div class="row">
                 <div class="col">
                     <div class="row">
                         <div class="col s12 m12 l6 xl6">
-                            <p class="flow-text t-charcoal">
-                                <strong>Who We Are</strong>
-                            </p>
-                            <p class="lead">Mezzaluna Street Kitchen is a Dundee based healthy food-to-go kitchen with a difference. Our
-                                ethos 'Italian born, Dundee bread' flies the flag for local usage of products regardless
+                            <h5>Who We Are</h5>
+                            <p class="lead">Mezzaluna Street Kitchen is a Dundee based healthy food-to-go kitchen with
+                                a difference. Our
+                                ethos 'Italian born, Dundee bread' flies the flag for local usage of products
+                                regardless
                                 of where you are from.</p>
-                            <p>Whether you are vegan or, vegetarian, a carnivore or gluten free, MSK serves up quality dishes
+                            <p>Whether you are vegan or, vegetarian, a carnivore or gluten free, MSK serves up quality
+                                dishes
                                 at affordable prices.
                             </p>
                         </div>
                         <div class="col s12 m12 l6 xl6">
-                            <p class="flow-text t-charcoal">
-                                <strong>Flavour First</strong>
-                            </p>
-                            <p class="">Taste is everything: for our salads, it’s all in the herbs and dressings; for our meats it’s
-                                all in the seasoning and stock; for everything else it’s the quality of the products we source.</p>
+                            <h5>Flavour First</h5>
+                            <p class="">Taste is everything: for our salads, it’s all in the herbs and dressings; for
+                                our meats it’s
+                                all in the seasoning and stock; for everything else it’s the quality of the products we
+                                source.</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s12 m12 l6 xl6">
-                            <p class="flow-text t-charcoal">
-                                <strong>Health & Nutrition</strong>
-                            </p>
-                            <p class="">Without trying too hard (steering clear of faddy terms like ‘clean eating', ‘raw’ and ‘paleo’
-                                diets), we seek to demonstrate that simple everyday food can easily be transformed into something
+                            <h5>Health & Nutrition</h5>
+                            <p class="">Without trying too hard (steering clear of faddy terms like ‘clean eating',
+                                ‘raw’ and ‘paleo’
+                                diets), we seek to demonstrate that simple everyday food can easily be transformed into
+                                something
                                 tasty, healthy and good for your body.</p>
                         </div>
                         <div class="col s12 m12 l6 xl6">
-                            <p class="flow-text t-charcoal">
-                                <strong>Suppliers</strong>
-                            </p>
-                            <p class="">Being a mobile business, we source exclusively from local businesses surrounding the event we
-                                are preparing for. With our customers in mind, we aim to bring you fresh, nutritious and
+                            <h5>Suppliers</h5>
+                            <p class="">Being a mobile business, we source exclusively from local businesses
+                                surrounding the event we
+                                are preparing for. With our customers in mind, we aim to bring you fresh, nutritious
+                                and
                                 most importantly delicious food, while showcasing the amazing talents of our partners.</p>
                         </div>
                     </div>
@@ -294,54 +275,56 @@
     <div id="work" class="section">
         <div class="parallax-container center valign-wrapper">
             <div class="parallax">
-                <img src="http://seagrassbhg.com/wp-content/gallery/italian-street/isk1.jpg">
+                <img class="parallax-img" src="https://pastaandcream.com/wp-content/uploads/2014/05/adobestock_98517357-2048x1367.jpeg">
             </div>
 
             <div class="container">
                 <div class="row">
                     <div class="col s12">
-                        <h1 class="text-center windsong display-1">Our Food</h1>
+                        <h1 class="text-center windsong display-1"><span><i class="material-icons">restaurant_menu</i></span>Our Food</h1>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="w-100 bg-white h-half valign-wrapper">
+        <div class="container bg-white h-half valign-wrapper">
             <div class="row">
                 <div class="col">
                     <div class="row">
                         <div class="col s12 m12 l6 xl6">
-                            <p class="flow-text t-charcoal">
-                                <strong>Vegan</strong>
-                            </p>
-                            <p class="">With few exceptions our daily three-salad selection are almost always vegan. We offer vegan alternative
-                                spreads in our sandwiches and wraps. Our daily soup is often but not always vegan. We have
-                                vegan cakes and offer a dairy alternative to milk for your flat white! There’s always a tasty
+                            <h5>Vegan</h5>
+                            <p class="">With few exceptions our daily three-salad selection are almost always vegan. We
+                                offer vegan alternative
+                                spreads in our sandwiches and wraps. Our daily soup is often but not always vegan. We
+                                have
+                                vegan cakes and offer a dairy alternative to milk for your flat white! There’s always a
+                                tasty
                                 option for the vegan diet on the QSK menu.</p>
                         </div>
                         <div class="col s12 m12 l6 xl6">
-                            <p class="flow-text t-charcoal">
-                                <strong>Vegetarian</strong>
-                            </p>
-                            <p class="">Take the information in our vegan section and add cheese, grilled, grated or melted!</p>
+                            <h5>Vegetarian</h5>
+                            <p class="">Take the information in our vegan section and add cheese, grilled, grated or
+                                melted!</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s12 m12 l6 xl6">
-                            <p class="flow-text t-charcoal">
-                                <strong>Carnivore</strong>
-                            </p>
-                            <p class="">We slow cook our meats daily, whether it’s slow cooked Welsh lamb, perfectly pulled pork, or
-                                beautifully braised beef brisket – they’re served hot on top of the QSK salad box, or in
+                            <h5>Carnivore</h5>
+                            <p class="">We slow cook our meats daily, whether it’s slow cooked Welsh lamb, perfectly
+                                pulled pork, or
+                                beautifully braised beef brisket – they’re served hot on top of the QSK salad box, or
+                                in
                                 a baguette, sandwich or wrap.</p>
                         </div>
                         <div class="col s12 m12 l6 xl6">
-                            <p class="flow-text t-charcoal">
-                                <strong>Gluten Free</strong>
-                            </p>
-                            <p class="">We think about the gluten free element in all our preparations. While we cannot guarantee there’s
-                                no cross contamination, we take care to use gluten free products in our dressings and stocks
-                                so those that have a GF diet can enjoy our slow cooked meats, our soups and our salads. We
-                                make our salads with GF grains and pulses, including quinoa, lentils and chickpeas. We offer
+                            <h5>Gluten Free</h5>
+                            <p class="">We think about the gluten free element in all our preparations. While we cannot
+                                guarantee there’s
+                                no cross contamination, we take care to use gluten free products in our dressings and
+                                stocks
+                                so those that have a GF diet can enjoy our slow cooked meats, our soups and our salads.
+                                We
+                                make our salads with GF grains and pulses, including quinoa, lentils and chickpeas. We
+                                offer
                                 gluten free bread and wraps and have a broad selection of tasty GF cakes.</p>
                         </div>
                     </div>
@@ -352,7 +335,7 @@
     <div id="contact" class="section">
         <div class="parallax-container center valign-wrapper">
             <div class="parallax">
-                <img src="https://cdn.concreteplayground.com/content/uploads/2017/06/Italian-Street-Kitchen-meatballs.jpeg">
+                <img class="parallax-img" src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/rEKBgql9irxhix6p/italian-food-on-vintage-wood-background-with-chalkboard-with-copyspace_bxhfxhwkl_thumbnail-full01.png">
             </div>
 
             <div class="container">
@@ -363,11 +346,11 @@
                 </div>
             </div>
         </div>
-        <div class="w-100 bg-white h-half valign-wrapper">
+        <div class="container bg-white h-half valign-wrapper">
             <div class="container h-100">
                 <div class="h-100">
                     <p class="flow-text t-charcoal">
-                        <strong>If you have any questions you are very welcome to contact us.</strong>
+                        <h5>If you have any questions you are very welcome to contact us.</h5>
                     </p>
                     <p class="">We are available for festivals, local markets and private events.</p>
                     <div class="">
